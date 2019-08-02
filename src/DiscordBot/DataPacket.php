@@ -19,10 +19,10 @@ class DataPacket
 
         $bits = preg_split('/ /', $message, -1, PREG_SPLIT_NO_EMPTY);
         //print_r($bits);
-        if (count($bits) < 2) {
-            return;
-        }
-
+        /* if (count($bits) < 2) {
+             return;
+         }
+ */
 
         $command = array_shift($bits);
         $this->message = implode(" ", $bits);

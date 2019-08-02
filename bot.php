@@ -31,9 +31,21 @@ $client->on('message', function ($message) use ($client) {
 
         if ($datapacket->command) {
             $response = Commands::{$datapacket->command}($datapacket);
-            $message->reply($response)->otherwise(function ($error) {
-                echo $error . PHP_EOL;
-            });
+            print ' responding to ' . $datapacket->command . "\n";
+            if (gettype($response) == 'object') {
+                print "its an object \n";
+
+                $message->reply('', array('embed' => $response))
+                    ->otherwise(function ($error) {
+                        echo $error . PHP_EOL;
+                    });
+
+            } else {
+                print "its a string \n";
+                $message->reply($response)->otherwise(function ($error) {
+                    echo $error . PHP_EOL;
+                });
+            }
         }
     } catch (\Exception $error) {
         // Handle exception
