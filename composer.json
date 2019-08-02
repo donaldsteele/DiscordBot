@@ -1,0 +1,16 @@
+{
+  "name": "donaldsteele/DiscordBot",
+  "description": "cyber patriot discord bot",
+  "minimum-stability": "stable",
+  "license": "unlicense",
+  "authors": [
+    {
+      "name": "Don Steele",
+      "email": "do@not.email"
+    }
+  ],
+  "require": {
+    "shanemcc/reactphp-discord": "0.3",
+    "vlucas/phpdotenv": "3.3.x-dev"
+  }
+}
