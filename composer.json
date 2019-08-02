@@ -10,7 +10,12 @@
     }
   ],
   "require": {
-    "shanemcc/reactphp-discord": "0.3",
-    "vlucas/phpdotenv": "3.3.x-dev"
+    "vlucas/phpdotenv": "3.3.x-dev",
+    "charlottedunois/yasmin": "^0.6.1"
+  },
+  "autoload": {
+    "psr-0": {
+      "DiscordBot": "src/"
+    }
   }
 }
